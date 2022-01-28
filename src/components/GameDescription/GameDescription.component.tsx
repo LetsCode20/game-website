@@ -37,7 +37,7 @@ const GameDescription = ({ content }: Props): ReactElement => {
     screenshots,
   } = content;
 
-  const [isReadMore, setIsReadMore] = useState(true);
+  const [isReadMore, setIsReadMore] = useState<boolean>(true);
 
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);

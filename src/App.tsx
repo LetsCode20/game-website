@@ -1,14 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Home from './Views/Home/Home.component';
+import GameDetailContainer from './components/GameDetail/GameDetailContainer.component';
+import GlobalStyles from './components/GlobalStyle/GlobalStyle';
 import './App.css';
-import Home from './components/Home/Home.component';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<Home />} />
-      {/* <Route path='/' element={<Home />} /> */}
-    </Routes>
+    <>
+      <GlobalStyles />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/game/:gameId' element={<GameDetailContainer />} />
+      </Routes>
+    </>
   );
 };
 

@@ -11,3 +11,29 @@ export type Game = {
   release_date: string;
   freetogame_profile_url: string;
 };
+
+export type Filter = {
+  platform: string;
+  genre?: string;
+  tag?: string;
+  sortBy: string;
+};
+
+interface Screen {
+  id: number;
+  image: string;
+}
+
+export type GameDesc = {
+  id: number;
+  title: string;
+  thumbnail: string;
+  description: string;
+  platform: string;
+  publisher: string;
+  game_url: string;
+  genre: string;
+  developer: string;
+  release_date: string;
+  screenshots: Screen[];
+};

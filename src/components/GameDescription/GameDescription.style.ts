@@ -45,6 +45,15 @@ export const Header = styled.div`
 
 export const Title = styled.h2`
   color: ${primaryTextColor};
+
+  a {
+    text-decoration: none;
+    color: ${primaryTextColor};
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Image = styled.img`
@@ -66,9 +75,11 @@ export const Description = styled.p`
   padding: 20px 0;
   line-height: 1.4;
   font-size: 14px;
+  max-width: 100%;
 
   @media (min-width: ${breakpoints.tablet}) {
     font-size: 16px;
+    max-width: ${breakpoints.tablet};
   }
 `;
 

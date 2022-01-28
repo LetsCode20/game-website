@@ -1,4 +1,5 @@
 import React, { ReactElement, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { GameDesc } from '../../types/types';
 import {
   About,
@@ -46,7 +47,9 @@ const GameDescription = ({ content }: Props): ReactElement => {
     <Container>
       <Banner>
         <Header>
-          <Title>{title}</Title>
+          <Title>
+            <Link to='/'>{title}</Link>
+          </Title>
           <Image src={thumbnail} alt='' />
         </Header>
 
